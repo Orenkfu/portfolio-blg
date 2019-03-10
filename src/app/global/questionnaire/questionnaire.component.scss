@@ -1,0 +1,18 @@
+@import "../../../styles/abstracts/variables";
+.questionnaire {
+
+    &__counter {
+        &__box {
+            font-size: 2rem;
+            padding: 1rem 2rem;
+            border-collapse: collapse;
+            border: .5px darken($color-grey-light-2, 15) solid;
+            display: inline-block;
+            &__active {
+                background-color: $color-secondary;
+                color: $color-white;
+            }
+        }
+    }
+
+}

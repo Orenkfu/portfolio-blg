@@ -1,0 +1,91 @@
+.btn {
+    font-size: $default-font-size;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4.0rem;
+    display: inline-block;
+    border-radius: .7rem;
+    transition: all, .2s;
+    font-weight: 400;
+    border: none;
+    font-family: inherit;
+    box-shadow: 0 .3rem .5rem rgba($color-black, .4);
+
+    &:hover {
+    transform: translateY(-.2rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, .4);
+    }
+    &:active {
+    transform: translateY(0rem);
+    }
+    &--primary {
+    background-color: $color-white;
+    color:$color-grey-dark;
+    }
+    &--secondary {
+    background-color: $color-primary;
+    color:$color-black;   
+    }
+    &--animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+    }
+}
+.btn-text {
+
+        font-size: $default-font-size;
+        color: $color-primary;
+        display: inline-block;
+        border-bottom: 1px solid $color-primary;
+        padding: 1rem;
+        transition: all;
+    &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: 0 1rem 1rem rgba($color-black, 0.5);
+        transform: translateY(-4px);
+    }
+    &:active {
+        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.5);
+        transform: translateY(0px);
+    
+    }
+}
+.ripple--primary {
+  background-position: center;
+  transition: background 0.8s;
+  &:hover {
+    color: $color-white;
+    background: $color-primary radial-gradient(circle, transparent 1%, $color-primary-light 1%) center/15000%;
+  }
+  &:active {
+  background-color: $color-primary-light;
+  background-size: 100%;
+  transition: background 0s;
+  }
+}
+.ripple--secondary {
+  background-position: center;
+  transition: background 0.8s;
+  &:hover {
+    color: $color-white;
+    background: $color-secondary radial-gradient(circle, transparent 1%, $color-secondary-light 1%) center/15000%;
+  }
+  &:active {
+    background-color: $color-secondary-light;
+    background-size: 100%;
+    transition: background 0s;
+  }
+}
+.ripple--lightblue {
+  background-position: center;
+  transition: background 0.8s;
+  &:hover {
+  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+  }
+  &:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
+  }
+}

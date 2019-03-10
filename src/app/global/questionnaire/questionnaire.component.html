@@ -1,0 +1,13 @@
+<p>
+  questionnaire works!
+</p>
+<div class="questionnaire">
+  <div class="questionnaire__counter">
+    <div class="questionnaire__counter__box" [ngClass]="{'questionnaire__counter__box__active': i === currentQuestionIndex}"
+      *ngFor="let question of questions; index as i">
+      <span>{{i + 1}}</span>
+    </div>
+  </div>
+  <question class="" (choose)="next($event)" [question]="currentQuestion"></question>
+  <result [result]="result"></result>
+</div>

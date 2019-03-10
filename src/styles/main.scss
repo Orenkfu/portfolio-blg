@@ -1,0 +1,30 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+@import "components/button";
+@import "components/form";
+@import "components/modal";
+@import "components/center-box";
+@import "layout/header";
+@import "layout/navigation";
+/*
+Animation Variables:
+animation-timing-function
+animation-delay
+animation-iteration-count
+animation-name
+animation-delay
+*/
+html {
+    font-size: 62.5%;
+}
+
+.center {
+  position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} 

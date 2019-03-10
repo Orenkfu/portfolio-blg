@@ -1,0 +1,10 @@
+<ng-container *ngIf="question">
+  <div class="question">
+    {{question.body}}
+  </div>
+  <ul class="answer-list" *ngFor="let answer of question.answers">
+    <li (click)="choose(answer)" class="answer-list__item ripple--secondary">
+      {{answer.body}}
+    </li>
+  </ul>
+</ng-container>

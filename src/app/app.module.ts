@@ -12,6 +12,8 @@ import { AdminAuthComponent } from './admin/admin-auth/admin-auth.component';
 import { AdminLayoutComponent } from './admin/admin-layout/admin-layout.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { ResultComponent } from './global/questionnaire/result/result.component';
+import { TitlecasePipe } from './pipes/titlecase.pipe';
+import { SummaryPipe } from './pipes/summary.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ResultComponent } from './global/questionnaire/result/result.component'
     AdminAuthComponent,
     AdminLayoutComponent,
     AdminDashboardComponent,
-    ResultComponent
+    ResultComponent,
+    TitlecasePipe,
+    SummaryPipe
   ],
   imports: [
     BrowserModule,

@@ -44,8 +44,13 @@ export class QuestionnaireComponent implements OnInit, AfterContentInit {
         } else {
           for (let i = 0; i < finalResult.length; i++) {
             const resultObj = finalResult[i];
-            if (result[tag] > resultObj.value && !finalResult.find(resultObject => resultObject.name === tag)) {
-              finalResult[i] = { name: tag, value: result[tag] };
+            if (result[tag] > resultObj.value) {
+              let existingTag = finalResult.find(resultObject => resultObject.name === tag);
+              if (!existingTag) {
+                finalResult[i] = { name: tag, value: result[tag] };
+              } else {
+                finalResult[finalResult.indexOf(existingTag)].value++;
+              }
               break;
             }
           }

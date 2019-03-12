@@ -6,6 +6,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { BlogPortalComponent } from './pages/blog-portal/blog-portal.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { BlogPostComponent } from './pages/blog-post/blog-post.component';
 
 const routes: Routes = [
   {
@@ -14,23 +15,27 @@ const routes: Routes = [
   },
   {
     path: 'blogs',
-    component: BlogPortalComponent
+    component: BlogPortalComponent,
   },
   {
-    path: 'admin',
+    path: ':id',
+    component: BlogPostComponent
+  },
+{
+  path: 'admin',
     component: AdminLayoutComponent,
-    children: [
-      {
-        path: '',
-        component: AdminDashboardComponent,
-        canActivate: [AdminAuthGuard]
-      },
-      {
-        path: 'login',
-        component: AdminAuthComponent,
-      }
-    ]
-  }
+      children: [
+        {
+          path: '',
+          component: AdminDashboardComponent,
+          canActivate: [AdminAuthGuard]
+        },
+        {
+          path: 'login',
+          component: AdminAuthComponent,
+        }
+      ]
+}
 ];
 
 @NgModule({

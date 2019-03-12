@@ -14,6 +14,7 @@ import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard
 import { ResultComponent } from './global/questionnaire/result/result.component';
 import { TitlecasePipe } from './pipes/titlecase.pipe';
 import { SummaryPipe } from './pipes/summary.pipe';
+import { BlogPostComponent } from './pages/blog-post/blog-post.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SummaryPipe } from './pipes/summary.pipe';
     AdminDashboardComponent,
     ResultComponent,
     TitlecasePipe,
-    SummaryPipe
+    SummaryPipe,
+    BlogPostComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Question } from 'src/app/models/question';
+import { BlogService } from 'src/app/services/blog.service';
 
 @Component({
   selector: 'app-blog-portal',
@@ -8,7 +9,9 @@ import { Question } from 'src/app/models/question';
 })
 export class BlogPortalComponent implements OnInit {
 
-  constructor() { }
+  constructor(private blogService: BlogService) { }
+  blogs = this.blogService.blogs;
+  test = "Hello, my name is humpty dumpty and I'm a big fat egg, I wear a hat and smelly old torn pants.";
   questions: Question[] = [
     {
       body: 'How are you?',
@@ -82,8 +85,11 @@ export class BlogPortalComponent implements OnInit {
           tags: ['Whatever', 'Shortcuts', 'Tech', 'OK']
         }
       ]
-
-    }]
+    }];
+  
+  random() {
+    return 30 + Math.round(Math.random() * 30);
+  }
   ngOnInit() {
   }
 

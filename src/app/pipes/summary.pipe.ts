@@ -5,8 +5,13 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class SummaryPipe implements PipeTransform {
 
-  transform(value: any, args?: any): any {
-    return null;
+  transform(value: string, length?: number): any {
+    if (!value) return;
+    length = length ? length : 50;
+    let returnVal = value.substr(0, length);
+    if (returnVal.length < value.length)
+      returnVal = returnVal + "...";
+    return returnVal;
   }
 
 }

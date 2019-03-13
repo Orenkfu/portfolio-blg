@@ -1,3 +1,5 @@
+import { ProjectsPortalComponent } from './pages/projects-portal/projects-portal.component';
+import { ContactComponent } from './pages/contact/contact.component';
 import { AdminAuthGuard } from './guards/admin-auth.guard';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { AdminLayoutComponent } from './admin/admin-layout/admin-layout.component';
@@ -7,6 +9,7 @@ import { BlogPortalComponent } from './pages/blog-portal/blog-portal.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BlogPostComponent } from './pages/blog-post/blog-post.component';
+import { GamesPortalComponent } from './pages/games-portal/games-portal.component';
 
 const routes: Routes = [
   {
@@ -18,24 +21,36 @@ const routes: Routes = [
     component: BlogPortalComponent,
   },
   {
-    path: ':id',
+    path: 'blogs/:id',
     component: BlogPostComponent
   },
-{
-  path: 'admin',
+  {
+    path: 'games',
+    component: GamesPortalComponent
+  },
+  {
+    path: 'projects',
+    component: ProjectsPortalComponent
+  },
+  {
+    path: 'contact',
+    component: ContactComponent
+  },
+  {
+    path: 'admin',
     component: AdminLayoutComponent,
-      children: [
-        {
-          path: '',
-          component: AdminDashboardComponent,
-          canActivate: [AdminAuthGuard]
-        },
-        {
-          path: 'login',
-          component: AdminAuthComponent,
-        }
-      ]
-}
+    children: [
+      {
+        path: '',
+        component: AdminDashboardComponent,
+        canActivate: [AdminAuthGuard]
+      },
+      {
+        path: 'login',
+        component: AdminAuthComponent,
+      }
+    ]
+  }
 ];
 
 @NgModule({

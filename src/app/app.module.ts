@@ -15,6 +15,10 @@ import { ResultComponent } from './global/questionnaire/result/result.component'
 import { TitlecasePipe } from './pipes/titlecase.pipe';
 import { SummaryPipe } from './pipes/summary.pipe';
 import { BlogPostComponent } from './pages/blog-post/blog-post.component';
+import { ProjectsPortalComponent } from './pages/projects-portal/projects-portal.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { GamesPortalComponent } from './pages/games-portal/games-portal.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import { BlogPostComponent } from './pages/blog-post/blog-post.component';
     ResultComponent,
     TitlecasePipe,
     SummaryPipe,
-    BlogPostComponent
+    BlogPostComponent,
+    ProjectsPortalComponent,
+    ContactComponent,
+    GamesPortalComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

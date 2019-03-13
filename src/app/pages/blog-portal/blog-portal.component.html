@@ -3,8 +3,8 @@
 {{ test | summary: 120}}
 
 <ul class="media-list">
-  <li class="media-list__item" *ngFor="let blog of blogs" [routerLink]="['/', blog.id]">
-    <div > <img class="media-list__item__image" src="../../../assets/generic-blog-image.jpg" alt=""></div>
+  <li class="media-list__item ripple--minor" *ngFor="let blog of blogs" [routerLink]="['/blogs/', blog.id]">
+    <div> <img class="media-list__item__image" src="../../../assets/generic-blog-image.jpg" alt=""></div>
     <div class="media-list__item__title">{{blog.title}}</div>
     <div class="media-list__item__summary">{{blog.content | summary: random()}}</div>
   </li>

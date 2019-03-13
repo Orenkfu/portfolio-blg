@@ -64,6 +64,21 @@
   transition: background 0s;
   }
 }
+.ripple--minor {
+  background-position: center;
+  transition: background 0.8s;
+  border-radius: 3px;
+  &:hover {
+    color: $color-black;
+    background: $color-grey-light-1 radial-gradient(circle, transparent 1%, $color-grey-light-1 1%) center/15000%;
+  }
+  &:active {
+    color: $color-black;
+    background-color: $color-grey-light-2;
+    background-size: 100%;
+    transition: background 0s;
+  } 
+}
 .ripple--secondary {
   background-position: center;
   transition: background 0.8s;

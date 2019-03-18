@@ -19,7 +19,8 @@ import { ProjectsPortalComponent } from './pages/projects-portal/projects-portal
 import { ContactComponent } from './pages/contact/contact.component';
 import { GamesPortalComponent } from './pages/games-portal/games-portal.component';
 import { AboutComponent } from './pages/about/about.component';
-
+import { AbtestComponent } from './pages/projects-portal/abtest/abtest.component';
+import {FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,11 +39,14 @@ import { AboutComponent } from './pages/about/about.component';
     ProjectsPortalComponent,
     ContactComponent,
     GamesPortalComponent,
-    AboutComponent
+    AboutComponent,
+    AbtestComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,6 +10,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BlogPostComponent } from './pages/blog-post/blog-post.component';
 import { GamesPortalComponent } from './pages/games-portal/games-portal.component';
+import { AbtestComponent } from './pages/projects-portal/abtest/abtest.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'projects',
     component: ProjectsPortalComponent
+  },
+  {
+    path: 'projects/:name',
+    component: AbtestComponent
   },
   {
     path: 'contact',

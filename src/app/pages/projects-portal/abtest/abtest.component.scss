@@ -1,0 +1,24 @@
+@import "../../../../styles//abstracts/variables";
+
+.form {
+    width: 60vw;
+    margin: 0 auto;
+    margin-top: 4rem;
+    text-align: center;
+    &__title {
+        font-weight: 600;
+        font-size: 2.5rem;
+    }
+    &__field {
+        label {
+            display: block;
+        }
+        text-align: start;
+        &__input {
+            font-size: 1.5rem;
+            border-radius: 5px;
+            border: 1px $color-grey-light-2 solid;
+            padding: 1rem 2rem;
+        }
+    }
+}

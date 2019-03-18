@@ -1,3 +1,7 @@
-<p>
-  projects-portal works!
-</p>
+<ul class = "media-list">
+  <li class="media-list__item ripple--minor" [routerLink]="['/projects/', 'abtest']">
+    <div> <img class="media-list__item__image" src="../../../assets/generic-blog-image.jpg" alt=""></div>
+    <div class="media-list__item__title">AB Test Pet Project</div>
+    <div class="media-list__item__summary">{{'Make sure your website is the best it can be.'| summary: 50}}</div>
+  </li>
+</ul>

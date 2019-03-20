@@ -20,7 +20,9 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { GamesPortalComponent } from './pages/games-portal/games-portal.component';
 import { AboutComponent } from './pages/about/about.component';
 import { AbtestComponent } from './pages/projects-portal/abtest/abtest.component';
-import {FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NumberToArrPipe } from './pipes/number-to-arr.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,12 +42,14 @@ import {FormsModule } from '@angular/forms';
     ContactComponent,
     GamesPortalComponent,
     AboutComponent,
-    AbtestComponent
+    AbtestComponent,
+    NumberToArrPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

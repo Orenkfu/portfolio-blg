@@ -1,5 +1,5 @@
 .navbar {
-    background-color: $color-primary;
+    background-color: $color-secondary;
     font-size: 2rem;
     position: fixed;
     top: 0;
@@ -28,7 +28,7 @@
         display: inline-block;
         text-decoration: none;
         font-weight: 200;
-        color: $color-black;
+        color: $color-white;
         background-size: 100%;
         transition: all .4s;
         background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-black 50%);
@@ -37,7 +37,7 @@
         cursor: pointer;
         a {
             text-decoration: none;
-            color: $color-black;
+            color: $color-white;
             &:hover {
                 color: $color-primary;
             } 

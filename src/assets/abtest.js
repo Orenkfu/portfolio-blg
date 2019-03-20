@@ -8,9 +8,10 @@
  */
 function runABTest(code) {
         let abtestData = JSON.parse(localStorage.getItem('abtest'));
-        let conversionID = abtestData.conversion_id;
-        let elementToChangeID = abtestData.variant_id;
-        let variants = [abtestData.variant_color_1, abtestData.variant_color_2];
+        let conversionID = abtestData.conversionID;
+        let elementToChangeID = abtestData.variantID;
+        let variants = abtestData.variants;
+        console.log(abtestData);
         console.log(variants);
         let currentVariant;
 

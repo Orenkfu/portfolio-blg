@@ -1,40 +1,41 @@
-<form (ngSubmit)="submit(f.value)" #f="ngForm" class="form">
+<form (ngSubmit)="submit(abForm.value)" [formGroup]="abForm" class="form">
   <div class="form__title">
     Create Your AB Test
   </div>
   <div class="form__field">
     <label for="conversion_id">Conversion ID</label>
-    <input #conversion_id="ngModel" ngModel name="conversion_id" type="text" class="form__field__input">
+    <input formControlName="conversionID" type="text" class="form__field__input">
   </div>
+  
   <div class="form__field">
     <label for="variant_id">Variant ID</label>
-    <input #variant_id="ngModel" ngModel name="variant_id" type="text" class="form__field__input">
-    <button style="margin-left: 2rem; margin-top: 2px;" class="btn form__add-variant">+</button>
+    <input formControlName="variantID" type="text" class="form__field__input">
+    <button (click)="addVariant()" style="margin-left: 2rem; margin-top: 2px;" class="btn form__add-variant">+</button>
   </div>
+  
+  <!--
+  -->
+  <ng-container formArrayName="variants" *ngFor="let v of variants.controls; index as i">
+      <div class="form__field">
+        <label for="variant_color_1">Variant Color</label>
+        <select 
+        formControlName="{{i}}"
+        class="form__field__input">
+        <option value="blue">Blue</option>
+        <option value="red">Red</option>
+        <option value="yellow">Yellow</option>
+        <option value="green">Green</option>
+      </select>
+    </div>
+    
+  </ng-container>
+
   <div class="form__field">
-    <label for="variant_color_1">First Variant Color</label>
-    <select class="form__field__input" #variant_color_1="ngModel" ngModel name="variant_color_1">
-      <option value="blue">Blue</option>
-      <option value="red">Red</option>
-      <option value="yellow">Yellow</option>
-      <option value="green">Green</option>
-    </select>
-  </div>
-  <div class="form__field">
-    <label for="variant_color_2">Second Variant Color</label>
-    <select class="form__field__input" #variant_color_2="ngModel" ngModel name="variant_color_2">
-      <option value="blue">Blue</option>
-      <option value="red">Red</option>
-      <option value="yellow">Yellow</option>
-      <option value="green">Green</option>
-    </select>
-  </div>
-  <div class="form__field">
-    <label for="tracking_style">Tracking Style</label>
-    <select class="form__field__input" #tracking_style="ngModel" ngModel name="tracking_style">
+    <label for="track">Tracking Style</label>
+    <select class="form__field__input" formControlName="track">
       <option value="conversion">Conversion</option>
       <option value="engagement">Engagement</option>
-
+      
     </select>
   </div>
   <button class="btn btn--secondary"> Submit </button>
